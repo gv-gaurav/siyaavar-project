@@ -235,3 +235,22 @@ function slide(direction) {
   sliderWrapper.style.transform = `translateX(-${(100 / itemsToShow) * currentPosition}%)`;
 }
 // slider section code end
+
+
+// scroll up button js start
+
+
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+// scroll up button js end
